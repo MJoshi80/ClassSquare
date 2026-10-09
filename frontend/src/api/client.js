@@ -1,8 +1,16 @@
 import axios from 'axios';
 
+let resolvedBaseUrl = import.meta.env.VITE_API_BASE_URL || import.meta.env.VITE_API_URL || '/api';
+if (resolvedBaseUrl && !resolvedBaseUrl.startsWith('http') && !resolvedBaseUrl.startsWith('/')) {
+  resolvedBaseUrl = `https://${resolvedBaseUrl}`;
+}
+if (resolvedBaseUrl.startsWith('http') && !resolvedBaseUrl.endsWith('/api') && !resolvedBaseUrl.includes('/api/')) {
+  resolvedBaseUrl = `${resolvedBaseUrl.replace(/\/+$/, '')}/api`;
+}
+
 // API client with JWT interceptor
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL || import.meta.env.VITE_API_URL || '/api',
+  baseURL: resolvedBaseUrl,
   headers: {
     'Content-Type': 'application/json',
   },
