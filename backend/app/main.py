@@ -77,7 +77,7 @@ app.include_router(voting.router)
 def health_check():
     return {"status": "ok", "service": "opticlass-ai"}
 
-@app.get("/api/stats/overview")
+@app.get("/api/stats/overview", tags=["System Admin"])
 def get_overview_stats(db: Session = Depends(get_db), current_user: User = Depends(get_current_user)):
     return {
         "departments_count": db.query(Department).count(),
@@ -87,7 +87,7 @@ def get_overview_stats(db: Session = Depends(get_db), current_user: User = Depen
         "batches_count": db.query(Batch).count(),
     }
 
-@app.post("/api/admin/seed-demo")
+@app.post("/api/admin/seed-demo", tags=["System Admin"])
 def seed_demo_endpoint():
     """Trigger seeding of official demo curriculum and schedules."""
     try:
