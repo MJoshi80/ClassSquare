@@ -1,7 +1,13 @@
 # ClassSquare
 ### Autonomous Multi-Constraint Academic Scheduler & Operations Platform
-> **Enterprise Academic Timetable & Classroom Resource Operating System**
-> Autonomous Multi-Constraint Optimization for Modern Higher Education
+
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-class--square.vercel.app-1d61f2?style=for-the-badge&logo=vercel&logoColor=white)](https://class-square.vercel.app)
+[![FastAPI](https://img.shields.io/badge/FastAPI-Backend%20API-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://classsquare-api.onrender.com/docs)
+[![OR-Tools](https://img.shields.io/badge/Google%20OR--Tools-CP--SAT%20Solver-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://developers.google.com/optimization)
+[![React 18](https://img.shields.io/badge/React%2018-Vite%20SPA-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://class-square.vercel.app)
+
+> 🚀 **Live Production Application:** [https://class-square.vercel.app](https://class-square.vercel.app)  
+> Autonomous Multi-Constraint Timetable Optimization for Modern Higher Education
 
 ---
 
@@ -163,8 +169,11 @@ npm install
 npm run dev
 ```
 
-- **Frontend URL:** [http://localhost:5173](http://localhost:5173)
-- **Backend Swagger API Docs:** [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
+### 🌐 Live Production Deployment
+- **Production Web Application:** [https://class-square.vercel.app](https://class-square.vercel.app)
+- **Production API & Swagger Docs:** [https://classsquare-api.onrender.com/docs](https://classsquare-api.onrender.com/docs)
+- **Local Dev URL:** [http://localhost:5173](http://localhost:5173)
+- **Local Swagger Docs:** [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
 
 ---
 
@@ -181,10 +190,10 @@ npm run dev
 
 ## 6. 5-Minute Evaluator Walkthrough Guide
 
-To experience the complete power of OptiClass AI in a live judging session, follow this sequence:
+To experience the complete power of **ClassSquare** in a live evaluation session:
 
 ### Step 1: Login as HOD (`hod.cse@opticlass.edu` / `hod123`)
-1. Navigate to [http://localhost:5173/login](http://localhost:5173/login).
+1. Navigate to **[https://class-square.vercel.app/login](https://class-square.vercel.app/login)** (or click any of the 4 demo role cards to auto-fill credentials).
 2. You will land on the **HOD Command Center**.
 3. Under the **Timetable & What-If Studio** tab:
    - Notice the pre-generated, approved timetable for **Computer Science & Engineering · Semester 3**.
@@ -251,7 +260,7 @@ cd backend
 - `test_substitution.py`: Leave application, ranking algorithm, and slot reassignment.
 - `test_notifications_export.py`: Notification lifecycle, CSV/Excel/iCal exports, and batch gap-time analytics.
 
-**Result:** `21 passed across all test suites.`
+**Result:** `31 passed across all test suites.`
 
 ---
 
