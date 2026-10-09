@@ -4,7 +4,7 @@ from pydantic import field_validator
 
 class Settings(BaseSettings):
     SECRET_KEY: str = "opticlass-ai-cloud-deployment-secret-key-change-in-prod"
-    DATABASE_URL: str = "sqlite:///./data/opticlass.db"
+    DATABASE_URL: str = "sqlite:///./data/classsquare.db"
     ACCESS_TOKEN_EXPIRE_HOURS: int = 8
     ALGORITHM: str = "HS256"
 

@@ -2,7 +2,7 @@
 set -e
 
 echo "=========================================================="
-echo "  OptiClass AI: Smart Timetable & Classroom Scheduler"
+echo "  ClassSquare: Smart Timetable & Scheduling Platform"
 echo "  Autonomous Academic Scheduling & Resource Optimization"
 echo "=========================================================="
 
@@ -21,12 +21,12 @@ if [ ! -d "backend/venv" ]; then
 fi
 
 echo "[2/3] Checking Database & Demo Dataset..."
-if [ ! -f "backend/data/opticlass.db" ]; then
+if [ ! -f "backend/data/classsquare.db" ] && [ ! -f "backend/data/smay.db" ]; then
     echo "Initializing demo dataset..."
     backend/venv/bin/python backend/seed_demo.py
 fi
 
-echo "[3/3] Launching OptiClass AI Services..."
+echo "[3/3] Launching ClassSquare Services..."
 echo "  - Backend:  http://127.0.0.1:8000 (FastAPI Swagger Docs at /docs)"
 echo "  - Frontend: http://localhost:5173 (Vite React App)"
 echo ""
@@ -41,7 +41,7 @@ echo ""
 trap 'kill $(jobs -p)' EXIT
 
 # Start Backend
-backend/venv/bin/uvicorn app.main:app --reload --host 127.0.0.1 --port 8000 --app-dir backend &
+backend/venv/bin/python -m uvicorn app.main:app --reload --host 127.0.0.1 --port 8000 --app-dir backend &
 
 # Start Frontend
 (cd frontend && npm run dev) &

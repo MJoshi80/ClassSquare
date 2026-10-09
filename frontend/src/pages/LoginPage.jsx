@@ -99,9 +99,13 @@ export default function LoginPage() {
       };
       navigate(dashboardMap[loggedInRole?.role || loggedInRole] || '/');
     } catch (err) {
-      setError(
-        err.response?.data?.detail || 'Authentication failed. Please check your institutional email and password.'
-      );
+      if (!err.response || err.code === 'ERR_NETWORK') {
+        setError('Cannot connect to backend server. Please verify the backend is running on port 8000.');
+      } else {
+        setError(
+          err.response?.data?.detail || 'Authentication failed. Please check your institutional email and password.'
+        );
+      }
     } finally {
       setLoading(false);
     }
