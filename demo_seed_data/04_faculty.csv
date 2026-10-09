@@ -1,0 +1,22 @@
+name,department_name,max_classes_per_day,max_classes_per_week,avg_monthly_leaves,qualified_subjects
+Dr. Alan Turing,Computer Science & Engineering,4,18,1.5,Data Structures;Algorithms;Theory of Computation;Artificial Intelligence & ML
+Dr. Ada Lovelace,Computer Science & Engineering,4,18,2.0,Data Structures;Database Systems;Compiler Design;Software Engineering
+Dr. Claude Shannon,Computer Science & Engineering,4,18,1.0,Computer Networks;Operating Systems;Theory of Computation
+Dr. Grace Hopper,Computer Science & Engineering,4,18,2.5,Operating Systems;Software Engineering;Data Structures Lab;Compilers & Architecture Lab
+Dr. John von Neumann,Computer Science & Engineering,4,18,1.5,Algorithms;Computer Architecture;Networks & Systems Lab;Artificial Intelligence & ML
+Dr. Katherine Johnson,Computer Science & Engineering,4,18,1.0,Artificial Intelligence & ML;Database Systems;Compilers & Architecture Lab
+Dr. Donald Knuth,Computer Science & Engineering,4,18,2.0,Data Structures;Algorithms;Theory of Computation;Networks & Systems Lab
+Prof. Nikola Tesla,Electronics & Communication,4,18,1.5,Signals & Systems;Wireless Communications;Robotics & Autonomous Systems;Digital Electronics
+Prof. Marie Curie,Electronics & Communication,4,18,2.0,Analog Electronic Circuits;Semiconductor Devices;Analog & Digital Circuits Lab
+Prof. Heinrich Hertz,Electronics & Communication,4,18,1.0,Digital Electronics;Electromagnetic Theory;Analog & Digital Circuits Lab;DSP Simulation Lab
+Prof. James Clerk Maxwell,Electronics & Communication,4,18,1.5,Signals & Systems;Electromagnetic Theory;Wireless Communications;Analog Electronic Circuits
+Prof. Michael Faraday,Electronics & Communication,4,18,2.0,Semiconductor Devices;Analog Electronic Circuits;Digital Signal Processing;Analog & Digital Circuits Lab
+Prof. James Watt,Mechanical Engineering,4,18,1.5,Fluid Mechanics;Thermodynamics & Heat Transfer;IC Engines & Gas Turbines;Thermal Engineering Lab
+Prof. Rudolf Diesel,Mechanical Engineering,4,18,2.0,IC Engines & Gas Turbines;Kinematics of Machinery;Thermodynamics & Heat Transfer;Thermal Engineering Lab
+Prof. Henry Ford,Mechanical Engineering,4,18,1.0,Manufacturing Processes;Mechanical Workshop Practice;Kinematics of Machinery
+Prof. Isaac Newton,Mechanical Engineering,4,18,1.5,Mechanics of Solids;Kinematics of Machinery;Fluid Mechanics
+Prof. Sadi Carnot,Mechanical Engineering,4,18,2.0,Thermodynamics & Heat Transfer;Fluid Mechanics;Thermal Engineering Lab;Mechanical Workshop Practice
+Dr. Tim Berners-Lee,Information Technology & AI,4,18,1.5,Web Technologies & Cloud;Distributed Systems;Web & Cloud Applications Lab;Cybersecurity & Cyber Law;Cloud Computing & Virtualization;Cloud & Big Data Lab
+Dr. Barbara Liskov,Information Technology & AI,4,18,1.0,Distributed Systems;Web Technologies & Cloud;Web & Cloud Applications Lab;Cloud Computing & Virtualization;Big Data Analytics
+Prof. Dennis Ritchie,Information Technology & AI,4,18,2.0,Web Technologies & Cloud;Cybersecurity & Cyber Law;Web & Cloud Applications Lab;Information Security & Cryptography;Cloud & Big Data Lab
+Prof. Ken Thompson,Information Technology & AI,4,18,1.5,Distributed Systems;Cybersecurity & Cyber Law;Web & Cloud Applications Lab;Information Security & Cryptography;Big Data Analytics

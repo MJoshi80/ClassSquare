@@ -1,0 +1,37 @@
+services:
+  # Backend Web Service (FastAPI + OR-Tools Solver)
+  - type: web
+    name: classsquare-api
+    runtime: python
+    region: oregon
+    plan: free
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
+      - key: ACCESS_TOKEN_EXPIRE_HOURS
+        value: "8"
+      - key: PYTHON_VERSION
+        value: "3.11.9"
+
+  # Optional Frontend Static Site (can also be deployed on Vercel)
+  - type: web
+    name: classsquare-frontend
+    runtime: static
+    region: oregon
+    plan: free
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./dist
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+    envVars:
+      - key: VITE_API_BASE_URL
+        fromService:
+          type: web
+          name: classsquare-api
+          property: host

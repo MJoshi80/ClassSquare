@@ -1,0 +1,21 @@
+name,capacity,is_lab,department_name
+LH-101 (Turing Hall),120,False,Computer Science & Engineering
+LH-102 (Babbage Lecture Room),90,False,Computer Science & Engineering
+LH-103,75,False,Computer Science & Engineering
+CS-Systems-Lab,60,True,Computer Science & Engineering
+CS-AI-Compute-Lab,60,True,Computer Science & Engineering
+CS-Software-Lab,60,True,Computer Science & Engineering
+LH-201 (Maxwell Hall),100,False,Electronics & Communication
+LH-202,75,False,Electronics & Communication
+EC-VLSI-Lab,50,True,Electronics & Communication
+EC-Communications-Lab,50,True,Electronics & Communication
+EC-Circuits-Lab,50,True,Electronics & Communication
+LH-301 (Watt Auditorium),100,False,Mechanical Engineering
+LH-302,80,False,Mechanical Engineering
+Mech-Workshop,60,True,Mechanical Engineering
+Mech-Thermal-Lab,50,True,Mechanical Engineering
+Mech-CAD-Lab,50,True,Mechanical Engineering
+LH-401 (Lovelace Hall),90,False,Information Technology & AI
+IT-Cloud-Lab,60,True,Information Technology & AI
+IT-Software-Lab,60,True,Information Technology & AI
+Central-Auditorium-A,180,False,

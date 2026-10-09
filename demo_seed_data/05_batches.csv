@@ -1,0 +1,10 @@
+name,department_name,semester,shift,strength
+CS-3A,Computer Science & Engineering,3,morning,55
+CS-3B,Computer Science & Engineering,3,morning,50
+CS-5A,Computer Science & Engineering,5,morning,52
+EC-3A,Electronics & Communication,3,morning,45
+EC-5A,Electronics & Communication,5,morning,40
+ME-3A,Mechanical Engineering,3,evening,50
+ME-5A,Mechanical Engineering,5,evening,45
+IT-3A,Information Technology & AI,3,morning,48
+IT-5A,Information Technology & AI,5,morning,45

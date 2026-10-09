@@ -1,0 +1,66 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+.venv/
+venv/
+env/
+
+# Databases & Local State
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3
+backend/data/*.db
+test*.db
+
+# Environment & Secrets
+.env
+.env.*
+*.env
+**/.env
+!*.env.example
+
+# Node & Frontend
+node_modules/
+frontend/dist/
+frontend/.cache/
+npm-debug.log*
+
+# Test, Coverage & Cache
+.coverage
+htmlcov/
+.pytest_cache/
+.cache/
+
+# Headless & Test Screenshots (preserve legitimate UI assets)
+edge_*.png
+screen_*.png
+screenshot*.png
+
+# IDE & OS
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+*.log
+
+# AI Assistant & Scratch Artifacts
+.gemini/
+.cursor/
+.cursorrules
+.windsurf/
+.windsurfrules
+GEMINI.md
+CLAUDE.md
+scratch/
+tmp/
+temp/
