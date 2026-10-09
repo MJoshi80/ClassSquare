@@ -22,21 +22,29 @@ async def lifespan(app: FastAPI):
     os.makedirs("data", exist_ok=True)
     init_db()
     
-    # Seed default admin user if none exists
+    # Seed demo users & institutional data if database is fresh
     db = SessionLocal()
     try:
-        admin = db.query(User).filter(User.role == UserRole.admin).first()
-        if not admin:
-            default_admin = User(
-                email="admin@opticlass.edu",
-                password_hash=pwd_context.hash("admin123"),
-                role=UserRole.admin,
-            )
-            db.add(default_admin)
-            db.commit()
-            print("[SEED] Default admin created: admin@opticlass.edu / admin123")
+        user_count = db.query(User).count()
+        if user_count <= 1:
+            print("[SEED] Fresh database detected. Seeding full institutional demo data...")
+            try:
+                from seed_demo import seed
+                seed()
+                print("[SEED] Full demo data seeded successfully!")
+            except Exception as e:
+                print(f"[SEED] Error auto-seeding demo data: {e}")
+                admin = db.query(User).filter(User.role == UserRole.admin).first()
+                if not admin:
+                    default_admin = User(
+                        email="admin@opticlass.edu",
+                        password_hash=pwd_context.hash("admin123"),
+                        role=UserRole.admin,
+                    )
+                    db.add(default_admin)
+                    db.commit()
         else:
-            print("[SEED] Admin user already exists, skipping seed.")
+            print(f"[SEED] Database already initialized with {user_count} users, skipping auto-seed.")
     finally:
         db.close()
     
